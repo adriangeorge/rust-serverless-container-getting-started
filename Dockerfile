@@ -5,7 +5,7 @@ FROM rust:1.70 as builder
 WORKDIR /usr/src/app
 
 # Copy the source code to the container
-COPY main.rs Cargo.toml Cargo.lock .
+COPY main.rs Cargo.toml ./
 
 # Build the Rust project
 RUN cargo build --release
