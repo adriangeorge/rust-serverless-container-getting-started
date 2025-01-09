@@ -8,7 +8,7 @@ async fn handle_request(_req: Request<Body>) -> Result<Response<Body>, Infallibl
 
 #[tokio::main]
 async fn main() {
-    let addr = ([127, 0, 0, 1], 3000).into();
+    let addr = ([0, 0, 0, 0], 3000).into();
 
     let make_svc = make_service_fn(|_conn| {
         async {
